@@ -47,7 +47,7 @@ const Portfoliopage = () => {
       style={{ boxSizing: 'border-box' }} // Ensuring padding and borders are accounted for
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
-      transition={{ duration: 1 }}
+      transition={{ duration: 1,ease:'easeInOut' }}
     >
       {/* Header */}
       <div className='text-center mb-16'>
