@@ -11,7 +11,7 @@ const items = [
     color: "from-cyan-400 to-blue-400",
     title: "React Ecommerce Website",
     description: "A comprehensive e-commerce platform featuring advanced functionalities like product filtering, cart management, and a responsive design.",
-    image: "/images/projects/ecommerce1.png",
+    image: "/images/Projects/ecommerce1.png",
     Link: "https://e-commerce-tawny-eight-44.vercel.app/"
   },
   {
@@ -19,7 +19,7 @@ const items = [
     color: "from-cyan-400 to-blue-400",
     title: "React Landing Page",
     description: "A visually appealing landing page designed for a hoodies store, featuring vibrant imagery and a call-to-action.",
-    image: "/images/projects/landingpage1.png",
+    image: "/images/Projects/landingpage1.png",
     Link: "https://landing-page-nine-lemon.vercel.app/"
   },
   {
@@ -27,7 +27,7 @@ const items = [
     color: "from-cyan-400 to-blue-400",
     title: "React Ecommerce Website",
     description: "A fully functional e-commerce website built with React and Tailwind CSS, offering an elegant interface for browsing and purchasing products.",
-    image: "/images/projects/ecommerce2.png",
+    image: "/images/Projects/ecommerce2.png",
     Link: "https://e-commerce-aces.vercel.app/"
   },
   {
@@ -35,7 +35,7 @@ const items = [
     color: "from-cyan-400 to-blue-400",
     title: "React Landing Page",
     description: "A clean and minimalistic landing page with a focus on modern UI/UX design, ideal for showcasing products or services effectively.",
-    image: "/images/projects/landingpage2.png",
+    image: "/images/Projects/landingpage2.png",
     Link: "https://landing-page-basic-nine.vercel.app/"
   },
 ];

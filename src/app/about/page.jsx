@@ -24,7 +24,7 @@ const Aboutpage = () => {
     { name: 'CSS', imageSrc: '/images/css.png' },
     { name: 'JavaScript', imageSrc: '/images/javaScript.png' },
     { name: 'React', imageSrc: '/images/react.png' },
-    { name: 'Next.js', imageSrc: '/images/nextJs.png' },
+    { name: 'Next.js', imageSrc: '/images/nextjs.png' },
     { name: 'Tailwind CSS', imageSrc: '/images/tailwindCss.png' },
     { name: 'Figma', imageSrc: '/images/figma.png' },
     { name: 'Vite', imageSrc: '/images/vite.png' },
