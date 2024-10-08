@@ -93,7 +93,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-3 sm:gap-8 sm:mt-4 lg:gap-18 lg:mt-1 ">
       <Link href='https://vercel.com/mahedy-hasans-projects'>
-        <Image src='/images/vercel.jpg ' alt='social link' width={42} height={24} className='hidden sm:flex' />
+        <Image src='/images/vercel.jpg ' alt='social link' width={24} height={24} className='hidden sm:flex' />
         </Link>
         <Link href='https://github.com/mahedy25'>
         <Image src='/images/github.png' alt='social link' width={24} height={24}  />
