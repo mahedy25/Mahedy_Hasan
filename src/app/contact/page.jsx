@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';  // Add useEffect here
 import { easeInOut, motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
@@ -10,10 +10,13 @@ const Contactpage = () => {
   const text = "Thanks For Reaching Me❤️";
   const form = useRef();
 
+  // Initialize EmailJS with the public key when the component mounts
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY);
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    
 
     // Reset success and error states
     setError(false);
@@ -22,10 +25,9 @@ const Contactpage = () => {
     // Correct usage of emailjs.sendForm
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,  // Correct the typo here
+        process.env.NEXT_PUBLIC_SERVICE_ID,  
         process.env.NEXT_PUBLIC_TEMPLATE_ID, 
         form.current, 
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -47,7 +49,7 @@ const Contactpage = () => {
 
   return (
     <motion.div 
-      className="relative sm:flex justify-center items-center sm:mt-36 py-5 px-5 md:px-20  text-white sm:gap-20"
+      className="relative sm:flex justify-center items-center sm:mt-36 py-5 px-5 md:px-20 text-white sm:gap-20"
       initial={{ y: '-200vh' }}
       animate={{ y: '0vh' }}
       transition={{ duration: 1 }}
@@ -75,7 +77,7 @@ const Contactpage = () => {
       <form 
         onSubmit={sendEmail} 
         ref={form} 
-        className="rounded-sm bg-gray-800 flex flex-col justify-center items-start  px-4 pb-14 mb-8 pt-4 w-full  max-w-md gap-4"
+        className="rounded-sm bg-gray-800 flex flex-col justify-center items-start px-4 pb-14 mb-8 pt-4 w-full max-w-md gap-4"
       >
         <span className="font-bold mb-2 px-2">To Mahedy Hasan</span>
         <textarea
@@ -87,7 +89,7 @@ const Contactpage = () => {
         <span className="font-bold mb-2 px-2">My E-mail Address Is:</span>
         <input
           name="user_email"
-          type="email"  // Use type="email" for better validation
+          type="email"
           className="w-full p-2 mb-4 text-white outline-none bg-transparent border-b"
           placeholder="Enter your email address"
         />
@@ -98,8 +100,6 @@ const Contactpage = () => {
         >
           Send
         </button>
-
-        
 
         {/* Display success or error messages */}
         {success && <span className='text-green-500 font-semibold'>Message sent successfully.</span>}
