@@ -11,7 +11,7 @@ const Homepage = () => {
      <div className='h-full sm:flex-row w-full flex flex-col justify-center items-center sm:px-4'>
 
      {/* profile image */}
-     <div className='items-center flex justify-center mt-12 sm:mt-0 w-60 sm:w-[700px]'>
+     <div className='items-center flex justify-center mt-16 sm:mt-0 w-60 sm:w-[700px]'>
      <Image src='/images/profile img.jpg' width={450} height={300} alt='Profile Image' className=' object-contain  rounded-full sm:rounded-md' priority/>
      </div>
 
