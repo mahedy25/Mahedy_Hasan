@@ -32,7 +32,7 @@ const Aboutpage = () => {
 
 
   return (
-    <motion.div className=' w-full px-4' initial={{y:'-200vh'}} animate={{y:'0'}} transition={{duration:1}} >
+    <motion.div className=' relative  py-5 px-5 md:px-20  text-white ' initial={{y:'-200vh'}} animate={{y:'0'}} transition={{duration:1}} >
 
       <div>
         <div className='w-full flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-16'>

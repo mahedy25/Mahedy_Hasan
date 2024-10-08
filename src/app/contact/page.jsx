@@ -47,7 +47,7 @@ const Contactpage = () => {
 
   return (
     <motion.div 
-      className="h-full  sm:gap-40  pt-24 flex flex-col justify-center sm:flex-row items-center px-4"
+      className="relative sm:flex justify-center items-center sm:mt-36 py-5 px-5 md:px-20  text-white sm:gap-20"
       initial={{ y: '-200vh' }}
       animate={{ y: '0vh' }}
       transition={{ duration: 1 }}
