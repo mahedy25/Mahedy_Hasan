@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
