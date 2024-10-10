@@ -110,7 +110,7 @@ const Navbar = () => {
           <Link href="https://www.fiverr.com/mahedy_hasan25"
                 onMouseEnter={() => handleMouseEnter('Fiverr')}
                 onMouseLeave={handleMouseLeave}>
-            <Image src="/images/fiverr.png" alt="Fiverr link" width={24} height={24} />
+            <Image src="/images/Fiverr.png" alt="Fiverr link" width={24} height={24} />
           </Link>
           {hoveredIcon === 'Fiverr' && (
             <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
@@ -144,7 +144,7 @@ const Navbar = () => {
           <Link href="https://www.upwork.com/freelancers/~01d4fad6920d552e7f"
                 onMouseEnter={() => handleMouseEnter('UpWork')}
                 onMouseLeave={handleMouseLeave}>
-            <Image src="/images/upwork.png" alt="UpWork link" width={24} height={24} />
+            <Image src="/images/Upwork.png" alt="UpWork link" width={28} height={24} />
           </Link>
           {hoveredIcon === 'UpWork' && (
             <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
