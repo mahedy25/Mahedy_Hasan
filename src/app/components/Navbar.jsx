@@ -17,6 +17,16 @@ const links = [
 
 
 const Navbar = () => {
+
+  const [hoveredIcon, setHoveredIcon] = useState(null); 
+
+  const handleMouseEnter = (name) => {
+    setHoveredIcon(name);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIcon(null);
+  };
     
   const [open,setOpen] = useState(false);
 
@@ -91,28 +101,154 @@ const Navbar = () => {
       </Link>
   
       </div>
-      <div className="flex gap-3 sm:gap-8 sm:mt-4 lg:gap-18 lg:mt-1 ">
-      <Link href='https://vercel.com/mahedy-hasans-projects'>
-        <Image src='/images/vercel.jpg' alt='social link' width={40} height={24} className='hidden sm:flex' />
-        </Link>
-        <Link href='https://github.com/mahedy25'>
-        <Image src='/images/github.png' alt='social link' width={24} height={24}  />
-        </Link>
-        <Link href='https://www.linkedin.com/in/mahedy-hasan-359a84321/'>
-        <Image src='/images/linkedin.png' alt='social link' width={24} height={24}/>
-        </Link>
-        <Link href='https://x.com/mahedy_has17156'>
-        <Image src='/images/x.png' alt='social link' width={24} height={24}  />
-        </Link>
-        <Link href='https://www.instagram.com/mahedyhasan253/'>
-        <Image src='/images/instagram.png' alt='social link' width={24} height={24}/>
-        </Link>
-        <Link href='https://www.facebook.com/mahedyhasan253'>
-        <Image src='/images/facebook.png' alt='social link' width={24} height={24}/>
-        </Link>
-        <Link href='https://wa.me/qr/J3MJAAS4VZ57J1'>
-        <Image src='/images/whatsapp.png' alt='social link' width={24} height={24}/>
-        </Link>
+
+      <div className="flex gap-4 lg:ml-4 sm:ml-24 ml-4  lg:gap-4  ">
+
+
+     {/* fiverr Link */}
+     <div className='relative'>
+          <Link href="https://www.fiverr.com/mahedy_hasan25"
+                onMouseEnter={() => handleMouseEnter('Fiverr')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/fiverr.png" alt="Fiverr link" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'Fiverr' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'Fiverr' ? 1 : 0 }}>
+              Fiverr
+            </p>
+          )}
+        </div>
+
+    
+
+
+       {/* LinkedIn Link */}
+       <div className='relative'>
+          <Link href="https://www.linkedin.com/in/mahedy-hasan-359a84321/"
+                onMouseEnter={() => handleMouseEnter('LinkedIn')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/linkedin.png" alt="LinkedIn link" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'LinkedIn' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'LinkedIn' ? 1 : 0 }}>
+              LinkedIn
+            </p>
+          )}
+       </div>
+
+        
+      {/* upwork Link */}
+      <div className='relative'>
+          <Link href="https://www.upwork.com/freelancers/~01d4fad6920d552e7f"
+                onMouseEnter={() => handleMouseEnter('UpWork')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/upwork.png" alt="UpWork link" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'UpWork' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'UpWork' ? 1 : 0 }}>
+              UpWork
+            </p>
+          )}
+        </div>
+
+
+        {/* Vercel Link */}
+        <div className='relative'>
+          <Link href="https://vercel.com/mahedy-hasans-projects"
+                onMouseEnter={() => handleMouseEnter('Vercel')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/vercel.jpg" alt="Vercel link" width={40} height={24} className="hidden sm:flex" />
+          </Link>
+          {hoveredIcon === 'Vercel' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'Vercel' ? 1 : 0 }}>
+              Vercel
+            </p>
+          )}
+        </div>
+        
+
+        {/* Instagram Link */}
+        <div className='relative'>
+          <Link href="https://www.instagram.com/mahedyhasan253/"
+                onMouseEnter={() => handleMouseEnter('Instagram')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/instagram.png" alt="Instagram link" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'Instagram' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'Instagram' ? 1 : 0 }}>
+              Instagram
+            </p>
+          )}
+          </div>
+       
+        {/* Facebook Link */}
+        <div className='relative'>
+          <Link href="https://www.facebook.com/mahedyhasan253"
+                onMouseEnter={() => handleMouseEnter('Facebook')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/facebook.png" alt="Facebook link" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'Facebook' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'Facebook' ? 1 : 0 }}>
+              Facebook
+            </p>
+          )}
+       </div>
+
+        {/* WhatsApp Link */}
+        <div className='relative'>
+          <Link href="https://wa.me/qr/J3MJAAS4VZ57J1"
+                onMouseEnter={() => handleMouseEnter('WhatsApp')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/whatsapp.png" alt="WhatsApp link" width={24} height={24} className="hidden sm:flex"/>
+          </Link>
+          {hoveredIcon === 'WhatsApp' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'WhatsApp' ? 1 : 0 }}>
+              WhatsApp
+            </p>
+          )}
+       </div>
+        
+
+        
+ {/* GitHub Link */}
+ <div className='relative'>
+          <Link href="https://github.com/mahedy25"
+                onMouseEnter={() => handleMouseEnter('GitHub')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/github.png" alt="GitHub link" className="hidden sm:flex" width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'GitHub' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'GitHub' ? 1 : 0 }}>
+              GitHub
+            </p>
+          )}
+        </div>
+       
+
+        {/* X (Twitter) Link */}
+        <div className='relative'>
+          <Link href="https://x.com/mahedy_has17156"
+                onMouseEnter={() => handleMouseEnter('X')}
+                onMouseLeave={handleMouseLeave}>
+            <Image src="/images/x.png" alt="X link" className='hidden sm:flex' width={24} height={24} />
+          </Link>
+          {hoveredIcon === 'X' && (
+            <p className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white rounded text-xs opacity-0 transition-opacity duration-300"
+               style={{ opacity: hoveredIcon === 'X' ? 1 : 0 }}>
+              X
+            </p>
+          )}
+        </div>
+
       </div>
       {/* small menu */}
       
