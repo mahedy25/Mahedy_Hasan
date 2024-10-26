@@ -141,7 +141,7 @@ const Navbar = () => {
         
       {/* upwork Link */}
       <div className='relative'>
-          <Link href="https://www.upwork.com/freelancers/~01d4fad6920d552e7f"
+          <Link href="https://www.upwork.com/freelancers/~01b92d6e7fbc89a9cc?mp_source=share"
                 onMouseEnter={() => handleMouseEnter('UpWork')}
                 onMouseLeave={handleMouseLeave}>
             <Image src="/images/Upwork.png" alt="UpWork link" width={28} height={24} />
